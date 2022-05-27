@@ -11,6 +11,10 @@
 <style>
     body {
         background-color: blueviolet;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        place-items: center;
     }
 
     div {
@@ -48,6 +52,8 @@
 
         <button id="turnofflight">SwitchOff</button>
 
+        
+
 
 
     </div>
@@ -58,6 +64,8 @@
         const turnonbutton = document.getElementById("turnon");
         const turnoffimage = document.getElementById("turnoff");
         const turnoffbutton = document.getElementById("turnofflight");
+        
+        
 
 
         const turnonthelight = () => turnoffimage.src = "images/Turnon.png";
@@ -69,6 +77,9 @@
         turnonbutton.addEventListener("click", turnonthelight);
 
         turnoffbutton.addEventListener("click", turnoffthelight);
+
+      
+    
 
 
 
