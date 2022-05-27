@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Turn Off and On</title>
+</head>
+
+<style>
+
+    body{
+        background-color: blueviolet;
+    }
+
+  div{
+
+    background-color: blueviolet;
+  }
+
+  h1{
+      color: black;
+  }
+
+  button#turnon{
+
+    background-color: green;
+  }
+
+  button#turnofflight{
+    
+    background-color: red;
+
+  }
+
+
+</style>
+
+
+<body>
+
+    <div id="main-div">
+
+    <h1>Switch ON and OFF the Bulb</h1>
+
+
+    <button id="turnon">SwitchOn</button>
+
+    <img src="images/Turnoff.png"  alt="turnofflight" id="turnoff">
+
+    <button id="turnofflight">SwitchOff</button>
+
+
+
+    </div>
+
+
+    <script>
+
+   const turnonbutton=  document.getElementById("turnon");
+   const turnoffimage= document.getElementById("turnoff");
+   const turnoffbutton=document.getElementById("turnofflight");
+
+
+   const turnonthelight= () => turnoffimage.src="images/Turnon.png";
+
+   const turnoffthelight= () => turnoffimage.src="images/Turnoff.png";
+
+   
+
+   turnonbutton.addEventListener("click" , turnonthelight);
+
+   turnoffbutton.addEventListener("click" , turnoffthelight);
+
+
+
+
+    </script>
+    
+</body>
+</html>

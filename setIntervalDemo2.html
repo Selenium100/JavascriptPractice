@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+p#para{
+
+    color: darkred;
+    
+
+</style>
+
+
+
+<body>
+
+    <p id="para1">This is a Stopwatch</p>
+    <br></br>
+
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+     
+    
+    <button id="para"></button>
+
+    <script>
+
+   const start=  document.getElementById("start");
+   const stop=  document.getElementById("stop");
+
+
+   
+   const paragraph=  document.getElementById("para");
+   let num=0;
+   let res;
+
+   const startevent= () =>{
+      
+   res= setInterval(() => {
+        
+        paragraph.innerHTML=num;
+        num++;
+
+    }, 100);
+
+   };
+
+    start.addEventListener("click" , startevent);
+
+
+    const stopevent= () => {
+  
+        clearInterval(res);
+    };
+
+
+    stop.addEventListener("click" , stopevent);
+       
+
+
+   
+
+
+    </script>
+</body>
+</html>

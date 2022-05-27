@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Jokes</title>
+</head>
+
+<style>
+
+p {
+    
+
+   
+    
+   color: brown;
+   size: 20px;
+  border: 15px;
+}
+
+
+
+
+</style>
+<body>
+    
+       
+        
+        
+        <button id="nextjoke">NextJoke</button>
+
+        
+
+        <p id="joke"> Awsome joke is loading...</p>
+        
+        
+         
+
+    <script>
+     
+    const jokebutton=document.getElementById("nextjoke");
+    const jokes=document.getElementById("joke");
+
+  const generaterandomjokes= async() =>{
+      
+    const nitya={
+
+        headers:{
+            Accept:"application/json"
+        }
+    }
+
+
+    const res= await  fetch("https://icanhazdadjoke.com/" , nitya);
+        const data= await res.json();
+        jokes.innerHTML=data.joke;
+        console.log(data.joke);
+
+
+  };
+
+
+
+   jokebutton.addEventListener("click", generaterandomjokes);
+   generaterandomjokes();
+
+
+    </script>
+    
+    
+</body>
+</html>

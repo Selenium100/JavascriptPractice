@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+    body{
+
+        background-color: blueviolet;
+        font-size: large;
+        display: grid;
+        margin: auto;
+      
+    }
+
+button{
+
+ display: inline-table;
+
+
+
+}
+
+</style>
+
+<body>
+
+ <div class="mydiv">
+  <div>
+  <p>PLEASE GIVE ANY ALPHABATE HERE</p>
+  <br>
+  <input type="text" id="myinput" onkeydown="KeyDown()" onkeyup="KeyUp()">
+  <p id="keys"></p>
+  
+</br>
+
+
+
+  </div>
+ </div>
+
+  <script>
+
+     const KeyDown= () =>{
+       
+
+document.getElementById("keys").innerHTML=`Key Down`;
+     }
+
+const KeyUp= () =>{
+       
+
+       document.getElementById("keys").innerHTML=`Key Up`
+
+     };
+
+  </script>
+
+
+    
+</body>
+</html>

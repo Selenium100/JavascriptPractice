@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+body{
+    background-color: antiquewhite;
+}
+
+p{
+    color: blue;
+    font-size: 15px;
+}
+
+button{
+    display: grid;
+    position: static;
+    font-size: 15px;
+    border: firebrick;
+    width: 15px;
+    left: 15px;
+    cursor: grab;
+}
+
+
+
+</style>
+<body>
+
+    <p>Guess My Name</p>
+    <button id="mybutton">ClickMe</button>
+    
+    <br id="break">
+
+    <p id="para"></p>
+    
+<script>
+
+ const button=  document.getElementById("mybutton");
+ const paragraph=document.getElementById("para");
+
+
+const timeout= () =>{
+
+    paragraph.innerHTML="LOADING...."
+  setTimeout(() =>{
+  
+    paragraph.innerHTML="MY NAME IS NITYA"
+  },1000)
+
+};
+
+
+ button.addEventListener("click" , timeout);
+
+ 
+  
+
+</script>
+
+</body>
+</html>

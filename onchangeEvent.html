@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+
+        background-color: chartreuse;
+    }
+
+    select{
+        background-color: cadetblue;
+    }
+    p{
+        font-style: italic;
+    }
+</style>
+<body>
+
+    <b>Name of the Employee</b>
+    <input type="employee" id="name">
+    
+    <select name="selectempl" id="select">
+        <option value=""></option>
+        <option value="Choclate">Choclate</option>
+        <option value="Vanela">Vanela</option>
+        <option value="Strewberry">Strewberry</option>
+        <option value="Mango">Mango</option>
+    </select>
+
+    <button id="mybutton" onclick="myFunction()">ClickMe</button>
+
+    <p id="ice"></p>
+    
+</body>
+
+
+<script>
+
+const btn=document.getElementById("mybutton");
+
+
+const sele=  document.getElementById("select");
+sele.addEventListener("change" , ()=>{
+  
+const name=  document.getElementById("name").value;
+const choc=document.getElementById("select").value;
+
+const result= document.getElementById("ice");
+result.innerHTML=`The Employee ${name} eats ${choc} icecream`
+console.log(result);
+
+ 
+
+});
+
+ 
+function myFunction() {
+  document.getElementById("ice").innerHTML = "YOU CLICKED ME!";
+}
+   // document.getElementById("ice").innerHTML="My time";
+
+  
+
+
+
+   
+ 
+
+   
+   
+    
+
+</script>
+</html>
