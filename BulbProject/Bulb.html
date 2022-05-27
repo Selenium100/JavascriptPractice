@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +9,29 @@
 </head>
 
 <style>
-
-    body{
+    body {
         background-color: blueviolet;
     }
 
-  div{
+    div {
 
-    background-color: blueviolet;
-  }
+        background-color: blueviolet;
+    }
 
-  h1{
-      color: black;
-  }
+    h1 {
+        color: black;
+    }
 
-  button#turnon{
+    button#turnon {
 
-    background-color: green;
-  }
+        background-color: green;
+    }
 
-  button#turnofflight{
-    
-    background-color: red;
+    button#turnofflight {
 
-  }
+        background-color: red;
 
-
+    }
 </style>
 
 
@@ -41,14 +39,14 @@
 
     <div id="main-div">
 
-    <h1>Switch ON and OFF the Bulb</h1>
+        <h1>Switch ON and OFF the Bulb</h1>
 
 
-    <button id="turnon">SwitchOn</button>
+        <button id="turnon">SwitchOn</button>
 
-    <img src="images/Turnoff.png"  alt="turnofflight" id="turnoff">
+        <img src="images/Turnoff.png" alt="turnofflight" id="turnoff">
 
-    <button id="turnofflight">SwitchOff</button>
+        <button id="turnofflight">SwitchOff</button>
 
 
 
@@ -57,25 +55,26 @@
 
     <script>
 
-   const turnonbutton=  document.getElementById("turnon");
-   const turnoffimage= document.getElementById("turnoff");
-   const turnoffbutton=document.getElementById("turnofflight");
+        const turnonbutton = document.getElementById("turnon");
+        const turnoffimage = document.getElementById("turnoff");
+        const turnoffbutton = document.getElementById("turnofflight");
 
 
-   const turnonthelight= () => turnoffimage.src="images/Turnon.png";
+        const turnonthelight = () => turnoffimage.src = "images/Turnon.png";
 
-   const turnoffthelight= () => turnoffimage.src="images/Turnoff.png";
+        const turnoffthelight = () => turnoffimage.src = "images/Turnoff.png";
 
-   
 
-   turnonbutton.addEventListener("click" , turnonthelight);
 
-   turnoffbutton.addEventListener("click" , turnoffthelight);
+        turnonbutton.addEventListener("click", turnonthelight);
+
+        turnoffbutton.addEventListener("click", turnoffthelight);
 
 
 
 
     </script>
-    
+
 </body>
+
 </html>
