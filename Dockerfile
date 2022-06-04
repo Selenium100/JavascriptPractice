@@ -10,3 +10,5 @@ RUN cp -rvf JavascriptPractice-master/* .
 RUN rm -rvf master.zip JavascriptPractice-master
 CMD ["/usr/sbin/httpd" , "-D" , "FOREGROUND"]
 EXPOSE 80
+
+
